@@ -1,0 +1,177 @@
+object Form5: TForm5
+  Left = 234
+  Height = 389
+  Top = 136
+  Width = 700
+  Caption = 'Transaksi'
+  ClientHeight = 0
+  ClientWidth = 0
+  Color = clGreen
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 248
+    Height = 28
+    Top = 8
+    Width = 170
+    Caption = 'Transaksi Penjualan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Poppins'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 136
+    Top = 80
+    Width = 672
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 352
+    Height = 25
+    Top = 48
+    Width = 328
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 328
+    Options = []
+    TabOrder = 1
+  end
+  object DBGrid2: TDBGrid
+    Left = 8
+    Height = 120
+    Top = 248
+    Width = 672
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource2
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 22
+    Top = 56
+    Width = 96
+    Caption = 'Tabel Transaksi'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Poppins SemiBold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 22
+    Top = 224
+    Width = 74
+    Caption = 'Tabel Harga'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Poppins SemiBold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 248
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Laporan'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'aplikasi_barang'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'C:\Program Files\MySQL\MySQL Server 8.2\lib\libmysql.dll'
+    Left = 80
+    Top = 160
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM transaksi'
+    )
+    Params = <>
+    Left = 172
+    Top = 160
+  end
+  object ZConnection2: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'aplikasi_barang'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'C:\Program Files\MySQL\MySQL Server 8.2\lib\libmysql.dll'
+    Left = 80
+    Top = 328
+  end
+  object ZQuery2: TZQuery
+    Connection = ZConnection2
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM harga_barang'
+    )
+    Params = <>
+    Left = 176
+    Top = 328
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 272
+    Top = 160
+  end
+  object DataSource2: TDataSource
+    DataSet = ZQuery2
+    Left = 265
+    Top = 328
+  end
+  object frReport1: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 120
+    Top = 32
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = ZQuery1
+    Left = 192
+    Top = 32
+  end
+end

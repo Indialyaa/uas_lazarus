@@ -1,0 +1,324 @@
+object Form3: TForm3
+  Left = 256
+  Height = 431
+  Top = 119
+  Width = 646
+  Caption = 'Data Master'
+  ClientHeight = 431
+  ClientWidth = 646
+  Color = clGreen
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 233
+    Height = 28
+    Top = 4
+    Width = 176
+    Caption = 'Aplikasi Data Barang'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Poppins'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 176
+    Top = 192
+    Width = 601
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Tambah'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 104
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Ubah'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 192
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Hapus'
+    OnClick = Button3Click
+    TabOrder = 3
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 16
+    Height = 25
+    Top = 376
+    Width = 601
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 601
+    DataSource = DataSource1
+    Options = [navFocusableButtons]
+    TabOrder = 4
+  end
+  object Label2: TLabel
+    Left = 23
+    Height = 23
+    Top = 38
+    Width = 63
+    Caption = 'ID Barang'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Poppins Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label2Click
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 23
+    Top = 65
+    Width = 55
+    Caption = 'Kategori'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Poppins Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 23
+    Top = 96
+    Width = 41
+    Caption = 'Nama'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Poppins Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 23
+    Height = 23
+    Top = 128
+    Width = 56
+    Caption = 'Gambar'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Poppins Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 304
+    Height = 23
+    Top = 38
+    Width = 66
+    Caption = 'Harga Beli'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Poppins Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 304
+    Height = 23
+    Top = 65
+    Width = 71
+    Caption = 'Harga Jual'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Poppins Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 304
+    Height = 23
+    Top = 96
+    Width = 28
+    Caption = 'Stok'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Poppins Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 88
+    Height = 23
+    Top = 38
+    Width = 40
+    OnChange = Edit1Change
+    TabOrder = 5
+  end
+  object Edit2: TEdit
+    Left = 88
+    Height = 23
+    Top = 65
+    Width = 192
+    TabOrder = 6
+  end
+  object Edit3: TEdit
+    Left = 88
+    Height = 23
+    Top = 96
+    Width = 192
+    TabOrder = 7
+  end
+  object Edit4: TEdit
+    Left = 88
+    Height = 23
+    Top = 128
+    Width = 192
+    TabOrder = 8
+  end
+  object Edit5: TEdit
+    Left = 384
+    Height = 23
+    Top = 38
+    Width = 192
+    TabOrder = 9
+  end
+  object Edit6: TEdit
+    Left = 384
+    Height = 23
+    Top = 65
+    Width = 192
+    TabOrder = 10
+  end
+  object Edit7: TEdit
+    Left = 384
+    Height = 23
+    Top = 96
+    Width = 192
+    TabOrder = 11
+  end
+  object Button4: TButton
+    Left = 304
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Simpan 1'
+    OnClick = Button4Click
+    TabOrder = 12
+  end
+  object Button5: TButton
+    Left = 384
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Simpan 2'
+    OnClick = Button5Click
+    TabOrder = 13
+  end
+  object Button6: TButton
+    Left = 464
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Batal'
+    TabOrder = 14
+  end
+  object Button7: TButton
+    Left = 544
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Keluar'
+    TabOrder = 15
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 312
+    Top = 267
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'aplikasi_barang'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'C:\Program Files\MySQL\MySQL Server 8.2\lib\libmysql.dll'
+    Left = 72
+    Top = 267
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM data_barang'
+    )
+    Params = <>
+    Left = 172
+    Top = 267
+  end
+  object ZQuery2: TZQuery
+    Connection = ZConnection2
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM data_barang'
+    )
+    Params = <>
+    Left = 172
+    Top = 320
+  end
+  object ZConnection2: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'aplikasi_barang'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'C:\Program Files\MySQL\MySQL Server 8.2\lib\libmysql.dll'
+    Left = 72
+    Top = 320
+  end
+end
