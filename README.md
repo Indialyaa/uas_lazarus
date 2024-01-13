@@ -45,7 +45,7 @@ Output Aplikasi Data Barang :
 
 ### Link Demo Aplikasi:
 
-
+https://youtu.be/_CMLJmFpTNg?si=-a13xUIcMUrnSQn_
 
 <hr>
 
